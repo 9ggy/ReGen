@@ -39,7 +39,7 @@ class ReGen(object):
       if not self.exist_username(username):
         validity = get(
           f"https://auth.roblox.com/v1/usernames/validate?request.username={username}&request.birthday=2022-09-04T19%3A10%3A05.906Z&request.context=Signup"
-        ).json()["code"]
+        ).json()["code"] # username validity check
 
         if validity == 0:
         
@@ -76,14 +76,16 @@ class ReGen(object):
 
 # Driver code
 if __name__ == "__main__":
+
   print(pystyle.Colorate.Horizontal(pystyle.Colors.blue_to_purple, """
 
-██████╗  █████╗ ███████╗██╗  ██╗ ██████╗ ███████╗███╗   ██╗
-██╔══██╗██╔══██╗██╔════╝██║  ██║██╔════╝ ██╔════╝████╗  ██║
-██║  ██║███████║███████╗███████║██║  ███╗█████╗  ██╔██╗ ██║
-██║  ██║██╔══██║╚════██║██╔══██║██║   ██║██╔══╝  ██║╚██╗██║
-██████╔╝██║  ██║███████║██║  ██║╚██████╔╝███████╗██║ ╚████║
-╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝
+      __________          ________                  
+      \______   \  ____  /  _____/   ____    ____   
+       |       _/_/ __ \/   \  ___ _/ __ \  /    \  
+       |    |   \\\\  ___/\    \_\  \\\\  ___/ |   |  \ 
+       |____|_  / \___  >\______  / \___  >|___|  / 
+              \/      \/        \/      \/      \/  
+
                 ~ Mass Username Checker ~
               ~ Made with <3 by 3sp & 9ggy ~
             
